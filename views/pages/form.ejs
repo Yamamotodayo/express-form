@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+</head>
+
+<body>
+    <h1>お問い合わせフォーム</h1>
+    <form action="/" method="post">
+        <input type="text" name="form-text" placeholder="内容を入力してください。"><input type="submit">
+    </form>
+
+    <ul>
+        <% for (let item of list) { %>
+            <li><%= item %></li>
+        <% } %>
+    </ul>
+</body>
+
+</html>
