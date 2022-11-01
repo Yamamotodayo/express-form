@@ -16,7 +16,11 @@
 
     <ul>
         <% for (let item of list) { %>
-            <li><%= item %></li>
+            <li><%= item.text %>
+                <form action="/delete" method="post">
+                    <input type="hidden" name="delete-id" value="<%= item.id %>" ><input type="submit" value="削除">
+                </form>
+            </li>
         <% } %>
     </ul>
 </body>
