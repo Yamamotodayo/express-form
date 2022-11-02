@@ -9,7 +9,7 @@ import { networkInterfaces } from "os";
 const app = Express();
 const PORT = process.env.PORT; // .envから読み込み
 const nets = networkInterfaces();
-const net = nets["en0"]?.find((v) => v.family == "IPv4");
+const net = nets["Wi-Fi"]?.find((v) => v.family == "IPv4");
 const ipAddress = net.address // IPアドレス取得
 
 app.listen(PORT);
