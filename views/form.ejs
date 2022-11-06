@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>入力フォーム</title>
+</head>
+
+<body>
+    <h1>入力フォーム</h1>
+    <form action="/" method="post">
+        <input type="text" name="text" placeholder="テキスト">
+        <button type="submit">送信</button>
+    </form>
+
+    <ul>
+        <% test.forEach((item) => { %>
+            <li>
+                <div>
+                    <!-- <span><%= item.id %></span> -->
+                    <span><%= item.text %></span>
+                    <a href="/edit/ <%= item.id %>">更新</a>
+                    <a href="/ <%= item.id %>">削除</a>
+                    <!-- <a href="/ <%= test.id %>">削除</a> test.id だとダメ -->
+                </div>
+            </li>
+        <% }) %>
+    </ul>
+</body>
+
+</html>
