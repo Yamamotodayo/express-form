@@ -22,7 +22,10 @@
                     <!-- <span><%= item.id %></span> -->
                     <span><%= item.text %></span>
                     <a href="/edit/ <%= item.id %>">更新</a>
-                    <a href="/ <%= item.id %>">削除</a>
+                    <a href="/delete/ <%= item.id %>">削除</a>
+                    <!-- <a href="/ <%= item.id %>">削除</a> href="/ だと sqlMessage: "Truncated incorrect DOUBLE value: 'favicon.ico'",
+                                                                    sql: "DELETE FROM test WHERE id = 'favicon.ico'" 
+                                                                    とエラーがでる -->
                     <!-- <a href="/ <%= test.id %>">削除</a> test.id だとダメ -->
                 </div>
             </li>

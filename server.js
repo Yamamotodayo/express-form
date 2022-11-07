@@ -132,7 +132,8 @@ app.post('/', (req, res) => {
 
 
 //　データの削除
-app.get('/:id', (req, res) => {
+// app.get('/:id', (req, res) だとダメ
+app.get('/delete/:id', (req, res) => {
   const sql = "DELETE FROM test WHERE id = ?"
 
   cone.query(sql, [req.params.id], (err, result, fields) => {
